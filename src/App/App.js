@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Statistics from "../Statistics/Statistics";
 import FeedbackOptions from "../FeedbackOptions/FeedbackOptions";
 import Section from "../Section/Section";
+import Notification from "../Notification/Notification";
 
 import {
   countTotalFeedback,
@@ -39,13 +40,16 @@ class App extends Component {
           />
         </Section>
         <Section text={"Statistics"}>
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={total}
-            positivePercentage={positivePercentage}
-          />
+          {total === 0 ?
+            <Notification message={"No feedback given"} /> :  
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={total}
+              positivePercentage={positivePercentage}
+            />
+        }
         </Section>
       </div>
     );
