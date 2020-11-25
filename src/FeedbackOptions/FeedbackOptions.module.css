@@ -1,0 +1,23 @@
+.buttonsCont {
+    padding: 0px;
+    margin: 0px;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttonsCont button {
+    border-radius: 6px;
+    border: 1px solid grey;
+    background-color: #fff;
+    padding: 4px 8px;
+    margin: 2px 4px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.buttonsCont button:hover,
+.buttonsCont button:active {
+    background-color: rgb(89, 89, 253);
+    color: white;
+}
